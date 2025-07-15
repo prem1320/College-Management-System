@@ -1,0 +1,15 @@
+# Ignore build output directories
+/bin/
+/build/
+/target/
+
+# Ignore IDE configuration
+/.idea/
+/.settings/
+/*.iml
+
+# Ignore compiled class files
+*.class
+
+# Ignore logs
+*.log
