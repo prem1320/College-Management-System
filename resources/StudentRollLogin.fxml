@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.StudentRollLoginController"
+            prefWidth="400" prefHeight="350"
+            styleClass="root-pane">
+
+    <VBox spacing="20" alignment="CENTER"
+          AnchorPane.topAnchor="30" AnchorPane.bottomAnchor="30"
+          AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30">
+
+        <Label text="Student Login"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <GridPane hgap="10" vgap="12" alignment="CENTER">
+            <Label text="Roll Number:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="rollNumberField"
+                       promptText="Enter Roll Number"
+                       GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Password:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <PasswordField fx:id="passwordField"
+                           promptText="Enter Password"
+                           GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Button text="Login"
+                onAction="#handleStudentLogin"
+                prefWidth="180"
+                styleClass="login-button"/>
+
+        <Label fx:id="statusLabel"
+               styleClass="error-label"
+               wrapText="true"/>
+    </VBox>
+</AnchorPane>

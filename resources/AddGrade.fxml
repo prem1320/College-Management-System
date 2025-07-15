@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.AddGradeController"
+            prefWidth="500" prefHeight="500"
+            styleClass="container">
+
+    <VBox spacing="20"
+          alignment="CENTER"
+          AnchorPane.topAnchor="30"
+          AnchorPane.bottomAnchor="30"
+          AnchorPane.leftAnchor="30"
+          AnchorPane.rightAnchor="30"
+          styleClass="form-box">
+
+        <Label text="Add Grade"
+               styleClass="form-title"/>
+
+        <TextField fx:id="rollNumberField"
+                   promptText="Roll Number (e.g. 21EC123)"
+                   styleClass="form-input"/>
+
+        <TextField fx:id="subjectField"
+                   promptText="Subject (e.g. Mathematics)"
+                   styleClass="form-input"/>
+
+        <TextField fx:id="gradeField"
+                   promptText="Grade (A/B/C...)"
+                   styleClass="form-input"/>
+
+        <Label fx:id="statusLabel"
+               styleClass="error-label"/>
+
+        <HBox spacing="20" alignment="CENTER">
+            <Button text="Submit"
+                    onAction="#handleSubmit"
+                    styleClass="primary-button"/>
+            <Button text="Back"
+                    onAction="#handleBack"
+                    styleClass="secondary-button"/>
+        </HBox>
+
+    </VBox>
+</AnchorPane>

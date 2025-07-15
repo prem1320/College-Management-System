@@ -1,0 +1,53 @@
+.root-pane {
+    -fx-background-color: #e3f2fd; /* Light blue background */
+    -fx-padding: 50;               /* More padding to increase container size */
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.header-label {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0d47a1; /* Deep blue */
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-padding: 10;
+}
+
+.form-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #0d47a1;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.text-field,
+.password-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: #757575;
+    -fx-font-size: 16px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-pref-width: 300px;     /* Wider fields */
+    -fx-pref-height: 35px;     /* Taller fields */
+    -fx-border-color: #90caf9;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.login-button {
+    -fx-background-color: #1976d2;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-padding: 10 20 10 20;
+    -fx-background-radius: 5;
+}
+
+.login-button:hover {
+    -fx-background-color: #1565c0;
+}
+
+.error-label {
+    -fx-text-fill: #d32f2f;
+    -fx-font-size: 14px;
+}
