@@ -57,3 +57,5 @@ This project demonstrates modern JavaFX GUI design, JDBC database integration, a
 1. *Clone the repository*
    ```bash
    git clone https://github.com/prem1320/College-Management-System.git
+
+   Author- Prem Sharma
