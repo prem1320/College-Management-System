@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.StudentDashboardController"
+            prefWidth="600"
+            prefHeight="400"
+            styleClass="root-pane">
+
+    <VBox alignment="TOP_CENTER"
+          spacing="20"
+          AnchorPane.topAnchor="40"
+          AnchorPane.leftAnchor="50"
+          AnchorPane.rightAnchor="50"
+          AnchorPane.bottomAnchor="40">
+
+        <Label text="Student Dashboard"
+               style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+        <Button fx:id="viewProfileButton"
+                text="View Profile"
+                onAction="#handleViewProfile"
+                prefWidth="200"/>
+
+        <Button fx:id="viewGradesButton"
+                text="View Grades"
+                onAction="#handleViewGrades"
+                prefWidth="200"/>
+
+        <Button fx:id="viewAssignmentsButton"
+                text="View Assignments"
+                onAction="#handleViewAssignments"
+                prefWidth="200"/>
+
+        <Button text="View Attendance"
+                onAction="#handleViewAttendance"
+                prefWidth="200"/>
+
+        <Button fx:id="logoutButton"
+                text="Logout"
+                onAction="#handleLogout"
+                prefWidth="200"/>
+                
+            
+                
+                <VBox fx:id="notificationBox"
+      spacing="10"
+      alignment="TOP_LEFT"
+      prefWidth="580"
+      style="-fx-background-color: #f9f9f9; -fx-padding: 10; -fx-border-color: #cccccc;">
+    <Label text="Notifications" style="-fx-font-weight: bold; -fx-font-size: 16;"/>
+    </VBox>
+      </VBox>
+</AnchorPane>

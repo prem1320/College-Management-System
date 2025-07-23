@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/24"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ui.AddAttendanceController"
+            styleClass="container">
+
+    <center>
+        <GridPane hgap="15" vgap="15" styleClass="form-grid">
+            <padding>
+                <Insets top="30" right="40" bottom="30" left="40"/>
+            </padding>
+
+            <Label text="Add Attendance"
+                   styleClass="form-title"
+                   GridPane.rowIndex="0"
+                   GridPane.columnIndex="0"
+                   GridPane.columnSpan="2"/>
+
+            <Label text="Roll Number:"
+                   styleClass="form-label"
+                   GridPane.rowIndex="1"
+                   GridPane.columnIndex="0"/>
+            <TextField fx:id="rollNumberField"
+                       promptText="e.g. 21EC123"
+                       styleClass="form-input"
+                       GridPane.rowIndex="1"
+                       GridPane.columnIndex="1"/>
+
+            <Label text="Date:"
+                   styleClass="form-label"
+                   GridPane.rowIndex="2"
+                   GridPane.columnIndex="0"/>
+            <DatePicker fx:id="datePicker"
+                        styleClass="form-input"
+                        GridPane.rowIndex="2"
+                        GridPane.columnIndex="1"/>
+
+            <Label text="Status:"
+                   styleClass="form-label"
+                   GridPane.rowIndex="3"
+                   GridPane.columnIndex="0"/>
+            <ChoiceBox fx:id="statusChoiceBox"
+                       styleClass="form-input"
+                       GridPane.rowIndex="3"
+                       GridPane.columnIndex="1"/>
+
+            <Button text="Submit"
+                    onAction="#handleSubmit"
+                    styleClass="primary-button"
+                    GridPane.rowIndex="4"
+                    GridPane.columnIndex="0"
+                    GridPane.columnSpan="2"
+                    maxWidth="Infinity"/>
+
+            <Label fx:id="statusLabel"
+                   GridPane.rowIndex="5"
+                   GridPane.columnIndex="0"
+                   GridPane.columnSpan="2"
+                   styleClass="error-label"/>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <Button text="Back to Dashboard"
+                onAction="#handleBack"
+                styleClass="secondary-button"
+                maxWidth="Infinity"
+                BorderPane.alignment="CENTER"/>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ui.ManageAssignmentController"
+            prefWidth="500"
+            prefHeight="500"
+            styleClass="root-pane">
+
+    <center>
+        <GridPane hgap="15" vgap="18">
+            <padding>
+                <Insets top="30" right="40" bottom="30" left="40"/>
+            </padding>
+
+            <!-- Assignment Title -->
+            <Label text="Title:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="titleField"
+                       promptText="Enter assignment title"
+                       GridPane.rowIndex="0"
+                       GridPane.columnIndex="1"/>
+
+            <!-- Assignment Description -->
+            <Label text="Description:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextArea fx:id="descriptionArea"
+                      promptText="Enter detailed description"
+                      prefRowCount="4"
+                      wrapText="true"
+                      GridPane.rowIndex="1"
+                      GridPane.columnIndex="1"/>
+
+            <!-- Due Date -->
+            <Label text="Due Date:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dueDatePicker"
+                        GridPane.rowIndex="2"
+                        GridPane.columnIndex="1"/>
+
+            <!-- Target Roll Number -->
+            <Label text="Target Roll No (optional):" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="rollNumberField"
+                       promptText="Leave blank to assign to all students"
+                       GridPane.rowIndex="3"
+                       GridPane.columnIndex="1"/>
+
+            <!-- Submit Button -->
+            <Button text="Add Assignment"
+                    onAction="#handleAddAssignment"
+                    GridPane.rowIndex="4"
+                    GridPane.columnIndex="0"
+                    GridPane.columnSpan="2"
+                    maxWidth="Infinity"/>
+
+            <!-- Status Label -->
+            <Label fx:id="statusLabel"
+                   textFill="green"
+                   GridPane.rowIndex="5"
+                   GridPane.columnIndex="0"
+                   GridPane.columnSpan="2"/>
+        </GridPane>
+    </center>
+
+    <bottom>
+        <Button text="Back to Dashboard"
+                onAction="#handleBack"
+                maxWidth="Infinity"
+                BorderPane.alignment="CENTER"/>
+    </bottom>
+
+</BorderPane>

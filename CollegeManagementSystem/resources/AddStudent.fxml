@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ui.AddStudentController"
+            prefWidth="450" prefHeight="500"
+            styleClass="container">
+
+    <VBox spacing="20" alignment="CENTER"
+          AnchorPane.topAnchor="20" AnchorPane.bottomAnchor="20"
+          AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20"
+          styleClass="form-box">
+
+        <Label text="Add New Student"
+               styleClass="form-title"/>
+
+        <TextField fx:id="rollNumberField"
+                   promptText="Roll Number (e.g. 21EC123)"
+                   styleClass="form-input"/>
+
+        <TextField fx:id="nameField"
+                   promptText="Full Name"
+                   styleClass="form-input"/>
+
+        <TextField fx:id="emailField"
+                   promptText="Email Address"
+                   styleClass="form-input"/>
+
+        <!-- Course ComboBox -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Course:" styleClass="form-label"/>
+            <ComboBox fx:id="courseComboBox" prefWidth="250"/>
+        </HBox>
+
+        <!-- Year ComboBox -->
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label text="Year:" styleClass="form-label"/>
+            <ComboBox fx:id="yearComboBox" promptText="Select Year" prefWidth="250"/>
+        </HBox>
+
+        <Label fx:id="statusLabel"
+               styleClass="error-label"/>
+
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="Add Student"
+                    onAction="#handleAddStudent"
+                    styleClass="primary-button"/>
+            <Button text="Back"
+                    onAction="#handleBack"
+                    styleClass="secondary-button"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

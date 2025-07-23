@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.ViewGradesController"
+      alignment="TOP_CENTER"
+      spacing="20"
+      prefWidth="600"
+      prefHeight="500"
+      styleClass="container">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="My Grades"
+           styleClass="header-label"/>
+
+    <TableView fx:id="gradeTable"
+               prefHeight="350"
+               prefWidth="550"
+               styleClass="table-view">
+               
+        <!-- This is the CORRECT way to set constrained resize policy -->
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+        </columnResizePolicy>
+
+        <columns>
+            <TableColumn fx:id="rollNumberColumn" text="Roll Number"/>
+            <TableColumn fx:id="subjectColumn" text="Subject"/>
+            <TableColumn fx:id="gradeColumn" text="Grade"/>
+        </columns>
+    </TableView>
+
+    <Button text="Back to Dashboard"
+            onAction="#handleBack"
+            prefWidth="200"
+            styleClass="primary-button"/>
+</VBox>

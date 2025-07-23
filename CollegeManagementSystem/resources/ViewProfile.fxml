@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.ViewProfileController"
+      alignment="TOP_CENTER"
+      spacing="18"
+      prefWidth="450"
+      prefHeight="500">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="Student Profile"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <VBox spacing="10" alignment="CENTER_LEFT">
+
+        <Label text="Roll Number:" style="-fx-font-weight: bold;"/>
+        <Label fx:id="rollNumberLabel" style="-fx-font-size: 14px;"/>
+
+        <Label text="Name:" style="-fx-font-weight: bold;"/>
+        <Label fx:id="nameLabel" style="-fx-font-size: 14px;"/>
+
+        <Label text="Email:" style="-fx-font-weight: bold;"/>
+        <Label fx:id="emailLabel" style="-fx-font-size: 14px;"/>
+
+        <Label text="Course:" style="-fx-font-weight: bold;"/>
+        <Label fx:id="courseLabel" style="-fx-font-size: 14px;"/>
+
+        <Label text="Year:" style="-fx-font-weight: bold;"/>
+        <Label fx:id="yearLabel" style="-fx-font-size: 14px;"/>
+    </VBox>
+
+    <Button text="Back to Dashboard"
+            onAction="#handleBack"
+            prefWidth="200"/>
+</VBox>
